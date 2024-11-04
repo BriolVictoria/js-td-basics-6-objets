@@ -4,16 +4,25 @@
 
 /* Une MÉTHODE est une fonction associée à un objet */
 
+/*
 const aurora = {
     nom: "Aurora",
     sante: 150,
-    force: 25
+    force: 25,
 };
 
 // Affiche "… a … points de vie et … en force"
 
+console.log(`${aurora.nom} a ${aurora.sante} points de vie et ${aurora.force} en force`);
+
 // Crée une fonction décrire qui prend personnage en paramètre et renvoie la description du personnage
 // écris ta fonction décrire ici
+
+function decrire(personnage) {
+    return `${aurora.nom} a ${aurora.sante} points de vie et ${aurora.force} en force`;
+}
+
+decrire();
 
 // Utilise cette fonction pour afficher la description d'Aurora
 
@@ -22,10 +31,16 @@ const aurora = {
     nom: "Aurora",
     sante: 150,
     force: 25,
+    decrire(personnage) {
+        return `${aurora.nom} a ${aurora.sante} points de vie et ${aurora.force} en force`;
+    }
     // renvoie la description du personnage
     // écris ton code ici
 };
 // Utilise à présent cette méthode pour afficher la description d'Aurora
+
+console.log(decrire());
+*/
 
 /*
 EXERCICE 1 : Ajoute une méthode calcAge à john qui calcule son âge
@@ -51,6 +66,16 @@ EXERCICE 2 :
 - Ajoute une méthode à cet objet qui lui permet de calculer sa propre surface
 - Utilise cette méthode pour afficher sa surface dans la console
 */
+
+const rectangle={
+    longeur: 5,
+    largeur: 3,
+    surface() {
+        return this.longeur * this.largeur;
+    },
+};
+
+console.log(rectangle.surface())
 
 /* **********************************
 * Les objets prédéfinis de JavaScript
